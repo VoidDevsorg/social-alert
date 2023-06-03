@@ -1,0 +1,38 @@
+{
+    "name": "@voidpkg/social-alert",
+    "decsription": "A simple package to get the latest video from a YouTube channel or the latest stream from a Twitch channel",
+    "version": "1.0.1",
+    "main": "./src/index.js",
+    "tags": [
+        "youtube",
+        "twitch",
+        "social",
+        "alert",
+        "instagram",
+        "twitter",
+        "reddit",
+        "game-discounts",
+        "steam",
+        "epic-games"
+    ],
+    "scripts": {
+        "build": "tsc && npm run copy:files",
+        "copy:files": "cpx \"README.md\" \"dist\"",
+        "test:yt": "ts-node-dev ./example/youtube.spec",
+        "test:tw": "ts-node-dev ./example/twitch.spec"
+    },
+    "author": "Void Development <support@voiddevs.org>",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/VoidDevsORG/social-alert.git"
+    },
+    "devDependencies": {
+        "@types/node": "^20.2.5",
+        "@types/xml2js": "^0.4.11"
+    },
+    "dependencies": {
+        "axios": "^1.4.0",
+        "xml2js": "^0.6.0"
+    }
+}

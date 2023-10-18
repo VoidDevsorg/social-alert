@@ -68,7 +68,7 @@ export class Twitch extends EventEmitter {
             }).then((res) => res.data).catch((err) => console.log(err));
 
             const stream = data.data?.[0] || null;
-            if (!stream) return;
+            if (!stream) continue;
 
             if (stream.type === 'live') this._newStream(stream);
             else this._streamEnded(stream);

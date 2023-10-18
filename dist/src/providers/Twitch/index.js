@@ -65,7 +65,7 @@ class Twitch extends node_events_1.EventEmitter {
             }).then((res) => res.data).catch((err) => console.log(err));
             const stream = data.data?.[0] || null;
             if (!stream)
-                return;
+                continue;
             if (stream.type === 'live')
                 this._newStream(stream);
             else
